@@ -1,0 +1,36 @@
+﻿@model Testimonial
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form asp-area="admin" asp-controller="tesimonial" asp-action="create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="@Model.ImageFile" class="form-label">Image</label>
+                    <input class="form-control" asp-for="@Model.ImageFile">
+                    <span asp-validation-for="@Model.ImageFile" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="@Model.Text" class="form-label">Title</label>
+                    <input class="form-control" asp-for="@Model.Text">
+                    <span asp-validation-for="@Model.Text" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="@Model.UserName" class="form-label">Title</label>
+                    <input class="form-control" asp-for="@Model.UserName">
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="@Model.UserSurname" class="form-label">Title</label>
+                    <input class="form-control" asp-for="@Model.UserSurname">
+                    <span asp-validation-for="@Model.UserSurname" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>

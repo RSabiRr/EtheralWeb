@@ -1,0 +1,276 @@
+﻿@model List<Testimonial>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header>
+    <section id="banner">
+        <div class="bg-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-text">
+                            <h2>
+                                Welcome to <span>Ethereal</span> World
+                            </h2>
+                            <p>
+                                Cras aliquet et mi id fermentum. Suspendisse eget sodales euismod.
+                            </p>
+
+                            <a href="https://www.free-css.com/free-css-templates" class="btn btn-outline rounded-pill">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="media">
+                    <div class="iconn">
+                        <i class="far fa-lightbulb"></i>
+                    </div>
+                    <div class="container-text">
+
+                        <h2>Elementum laoreet</h2>
+                        <p>Cras aliquet et mi id fermentum. Suspendisse eget sodales lorem, vestibulum euismod lectus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="media">
+                    <div class="iconn">
+                        <i class="far fa-eye"></i>
+
+                    </div>
+                    <div class="container-text">
+
+                        <h2>Elementum laoreet</h2>
+                        <p>Cras aliquet et mi id fermentum. Suspendisse eget sodales lorem, vestibulum euismod lectus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="media">
+                    <div class="iconn">
+                        <i class="far fa-heart"></i>
+
+                    </div>
+                    <div class="container-text">
+
+                        <h2>Elementum laoreet</h2>
+                        <p>Cras aliquet et mi id fermentum. Suspendisse eget sodales lorem, vestibulum euismod lectus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="work">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container-text mt-5">
+                    <h2>
+                        Our Work
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-ls-6 mt-3">
+                        <div class="img">
+                            <a href="">
+                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-ls-6 mt-3">
+                        <div class="img">
+                            <a href="">
+                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-ls-6 mt-3">
+                        <div class="img">
+                            <a href="">
+                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-ls-6 mt-3">
+                        <div class="img">
+                            <a href="">
+                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link">
+                    <a href="">View More Items</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container-text">
+                    <h2>
+                        Our Testimonials
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="owl-carusell">
+                        <div class="owl-carousel owl-theme">
+                                    @foreach (var item in Model)
+                                    {
+                                             <div class="item">
+                                                      <p><sup><i class="fa fa-quote-left"></i></sup>@item.Text<sup><i class="fa fa-quote-right"></i></sup></p>
+                                                 <div class="item-image">
+                                                    <img src="~/Uploads/@item.Image" alt="">
+                                                     <h3>@item.UserName @item.UserSurname</h3>
+                                                 </div>
+                                           </div>
+                                  }
+                              </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section id="testimonial2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container-text mt-5">
+                    <h3>
+                        Subscribe For Updates
+                    </h3>
+                    <p>
+                        Join our 1000+ subscribers and get access to the latest tools, freebies, product announcements and much more!
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <div class="container-link">
+                    <a href="">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container-text">
+                    <h3>
+                        About Us
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-text">
+                    <p>
+                        Donec velit ex, faucibus eu mauris in, sodales placerat augue. Phasellus feugiat ex id enim laoreet mattis. Quisque velit quam, pharetra non lorem vel, scelerisque ornare dolor. Etiam id ex justo. Nullam nec ipsum non augue convallis gravida. Praesent mattis placerat sodales. Pellentesque nec egestas neque.
+                    </p>
+                    <p>
+                        Donec velit ex, faucibus eu mauris in, sodales placerat augue. Phasellus feugiat ex id enim laoreet mattis. Quisque velit quam, pharetra non lorem vel, scelerisque ornare dolor. Etiam id ex justo. Nullam nec ipsum non augue convallis gravida. Praesent mattis placerat sodales. Pellentesque nec egestas neque.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="row client">
+                    <div class="col-md-6">
+                        <h5>
+                            Our Clients
+                        </h5>
+                        <div class="timer" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50">55</div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h5>
+                            Projects completed
+                        </h5>
+                        <div class="timer" data-from="0" data-to="88" data-speed="5000" data-refresh-interval="50">88</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container-text">
+                    <h3>
+                        Contact Us
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-6 formm">
+                <form action="" role="form">
+                    <div class="row">
+                        <div class="col-lg-6  ">
+                            <input class="mess form-control" placeholder="Name" type="text">
+                        </div>
+                        <div class="col-lg-6">
+                            <input class="mess form-control" placeholder="Email" type="email">
+                        </div>
+                        <div class="col-lg-12 mt-3">
+                            <textarea class=" mess form-control" placeholder="Message" name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="linkk">
+                        <a href="">Send Message</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 adress">
+                <div class="container">
+                    <div class="row">
+                        <div class="container-text">
+                            <h5>
+                                Address
+                            </h5>
+                            <p>
+                                123, This Appartment,
+                                Near Ocean Street
+                                New York
+                            </p>
+                            <div class="email">
+                                <i class="fas fa-at"></i>
+                                info@domain.com
+                                <br>
+                                <i class="fas fa-mobile"></i>
+                                123 456 789
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
